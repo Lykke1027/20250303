@@ -28,7 +28,7 @@ function setup() {
   dropdown.position(button.x + button.width + 10, 10);
   dropdown.option('淡江大學');
   dropdown.option('教科系網站');
-  dropdown.option('第三周');
+  dropdown.option('測驗卷');
   dropdown.changed(() => {
     let selected = dropdown.value();
     if (iframe) iframe.remove(); // 移除之前的 iframe
@@ -39,8 +39,8 @@ function setup() {
       iframe.attribute('src', 'https://www.tku.edu.tw/');
     } else if (selected === '教科系網站') {
       iframe.attribute('src', 'https://www.et.tku.edu.tw/');
-    } else if (selected === '第三周') {
-      iframe.attribute('src', 'https://hackmd.io/@Lykke/S1JnXYGikg');
+    } else if (selected === '測驗卷') {
+      iframe.attribute('src', 'https://lykke1027.github.io/20250310/');
     }
   });
 }
